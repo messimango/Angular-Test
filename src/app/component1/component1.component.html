@@ -1,0 +1,26 @@
+<h1 style="color:red">{{getEmployeeFirstName()}}</h1>
+
+<h1 style="color:blue">{{getEmployeeLastName()}}</h1>
+
+<h1 style="color:green">{{getEmployeeID()}}</h1>
+
+
+
+<input type="text" [value]="employeeFirstName" />
+
+<button (click)="Login()">Login</button>
+
+
+<h1 *ngIf="login">You have sucessfully logged in!</h1>
+
+
+
+<input [(ngModel)]="myFullname" />
+<p>{{myFullname}}</p>
+
+
+
+
+
+
+
