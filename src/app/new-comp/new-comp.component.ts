@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FavoriteColorService } from '../favorite-color.service';
 
 @Component({
   selector: 'app-new-comp',
@@ -8,35 +9,23 @@ import { Component, OnInit } from '@angular/core';
 export class NewCompComponent implements OnInit {
   myName = "Umang";
 
-  public color = [
-    {
-      "Color": "Pink",
-      "Number of People": 6
-    },
-    
-    {
-      "Color": "Blue",
-      "Number of People": 8
-    },
-    
-    {
-      "Color": "Purple",
-      "Number of People": 4
-    },
-    
-    {
-      "Color": "Red",
-      "Number of People": 5
-    },
-    
-    {
-      "Color": "Yellow",
-      "Number of People": 2
-    },
-  ]
+  educationLevel = [
+    'Highschool Diploma',
+    'GED or equivalent',
+    'College Diploma',
+    "Bachelor's degree",
+    "Master's Degree",
+    "Doctoral degree"
+  ];
+
+  public color = [];
 
   
   first:boolean = false;
+
+  constructor(private _favoriteColor: FavoriteColorService) {
+
+  }
   
   changeFirst() {
     this.first= true;

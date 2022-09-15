@@ -1,1 +1,22 @@
-<h1>New Page</h1>
+<h1>{{title | uppercase}}</h1>
+
+<h1>{{title | lowercase}}</h1>
+
+<h2>{{currentDate | date}}</h2>
+<h2>{{currentDate | date:"medium"}}</h2>
+<h2>{{currentDate | date:"short"}}</h2>
+<h2>{{currentDate | date:"long"}}</h2>
+
+<h2>{{currentDate | date:"d/MM/y"}}</h2>
+
+<h2>{{2123 | currency:"CAD"}}</h2>
+<h2>{{2123 | currency:"USD"}}</h2>
+<h2>{{2123 | currency:"NPR"}}</h2>
+
+
+<h2>{{studentDetails | json}}</h2>
+
+<h3>{{weekdays | slice:0:3}}</h3>
+
+<h3>{{.02135 | percent}}</h3>
+

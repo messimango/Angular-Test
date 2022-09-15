@@ -7,6 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepeatCompComponent implements OnInit {
 
+  title:string = "Hello";
+
+
+  studentDetails = {
+    name: "Umang",
+    id: 1254,
+    address: "1234 street road",
+    balance: 22
+  }
+
+  currentDate = new Date();
+
+  weekdays = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday'
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

@@ -19,6 +19,90 @@
 <p>{{myFullname}}</p>
 
 
+<hr>
+
+<h1>New Day</h1>
+
+<!-- If -->
+<h1> *ngIf </h1>
+
+<button (click)="pressButton()">Button</button>
+
+<p *ngIf="button">You pressed the button</p>
+<hr>
+<!-- For -->
+<h1> *ngFor </h1>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>I.D</th>
+        <th>E-mail</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.name}}</td>
+            <td>{{employee.id}}</td>
+            <td>{{employee.name | lowercase }}@workemail.com</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<!-- Switch -->
+<h1>*ngSwitch</h1>
+
+<h1>What is your favorite color?</h1>
+<select [(ngModel)]="color">
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="red">Red</option>
+    <option value="other">Other</option>
+    <option value="pink">Pink</option>
+</select>
+
+<main [ngSwitch]="color">
+    <h4 *ngSwitchCase="'blue'" setBlueColor>Blue</h4>
+    <h4 *ngSwitchCase="'green'" setGreenColor>Green</h4>
+    <h4 *ngSwitchCase="'red'" setRedColor>Red</h4>
+    <h4 *ngSwitchDefault>Other</h4>
+</main>
+
+<hr>
+
+
+<h1>Pipes</h1>
+
+{{myFirstName}} <br>
+
+{{myFirstName | slice:1 }}o
+
+<p>{{employees | json}}</p>
+
+
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Product Number</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let fruit of fruits">
+            <td>{{fruit.fruitName}}</td>
+            <td>{{fruit.fruitPrice | number:'1.2-2' | currency:"CAD":"symbol"}}</td>
+            <td>{{fruit.productNumber}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+{{date | date:'fullDate'}}
+
+
+<hr>
+
+
 
 
 
