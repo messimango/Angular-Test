@@ -6,21 +6,24 @@
 
             {{ studentForm.value | json}}
 
-            <div ngModelGroup="Name">                
+            {{studentModel | json}}
+
+
+            <div>                
                 <div class="form-group">
                     <label>First Name:</label>
-                    <input ngModel name="firstName" type="text" class="form-control w-25">       
+                    <input ngModel name="firstName" type="text" class="form-control w-25" required>       
                 </div>
 
                 <div class="form-group"> 
                     <label>Last Name:</label>
-                    <input ngModel name="lastName" type="text" class="form-control w-25">                
+                    <input ngModel name="lastName" type="text" class="form-control w-25" required>                
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Age:</label>
-                <input  ngModel name="age" type="number" min="18" max="99" class="form-control-sm w-auto">            
+                <input  ngModel name="age" type="number" min="18" max="99" class="form-control-sm w-auto" required>            
             </div>
 
             <div class="form-group">                        
@@ -33,16 +36,21 @@
 
             <div class="form-group">
                 <label>Email:</label>
-                <input  ngModel name="email" type="email" class="form-control w-25">            
+                <input  ngModel name="email" type="email" class="form-control w-25" required>            
             </div>
 
             <div class="form-group">
                 <label>Phone Number:</label>
-                <input  ngModel name="phone" type="tel" class="form-control w-25">            
+                <input  ngModel name="phone" type="tel" class="form-control w-25" required>            
+            </div>
+            
+            <div>
+                <p style="color:red" *ngIf="studentForm.form.invalid">Please fill out form</p>
+                <p style="color:green" *ngIf="studentForm.form.valid">Form is filled check for error and submit.</p>
             </div>
 
-            <button class="btn btn-primary my-2" type="submit">Submit</button>
-
+            <button [disabled]="studentForm.form.invalid" class="btn btn-primary my-2" type="submit">Submit</button>
+            
         </form>
     </div>
     

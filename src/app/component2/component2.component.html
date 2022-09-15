@@ -1,2 +1,29 @@
-<p>component2 works!</p>
-<input type="text" />
+<h1>Favorite Book</h1>
+
+<form [formGroup]="favoriteBook">
+    <div class="form-group">
+        <label>Book Name</label>
+        <input formControlName="bookName" type="text" class="form-control w-25" required>
+    </div>
+
+    <div formGroupName="authorName">
+        <div class="form-group">
+            <label>Author First Name</label>
+            <input formControlName="authorFirstName" type="text" class="form-control w-25" required>
+        </div>
+        <div class="form-group">
+            <label>Author Last Name</label>
+            <input formControlName="authorLastName" type="text" class="form-control w-25" required>
+        </div>
+    </div>
+    
+
+    <div class="form-group">
+        <label>Times Read</label>
+        <input formControlName="timesRead" type="number" class="form-control w-25" >
+    </div>
+
+    <button class="btn btn-primary">Submit</button>
+    
+</form>
+

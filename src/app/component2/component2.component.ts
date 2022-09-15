@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule } from '@angular/forms';
 import { NgModel } from '@angular/forms';
 
 @Component({
@@ -8,7 +8,14 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./component2.component.css']
 })
 export class Component2Component implements OnInit {
-  newPlayerName = new FormControl('');
+  favoriteBook = new FormGroup({
+    bookName: new FormControl(''),
+    authorName: new FormGroup({
+      authorFirstName: new FormGroup(''),
+      authorLastname: new FormGroup('')
+    }),
+    timesRead: new FormControl('')
+  });
 
   constructor() { }
 

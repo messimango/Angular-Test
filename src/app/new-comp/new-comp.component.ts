@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FavoriteColorService } from '../favorite-color.service';
+import { Student } from '../student';
 
 @Component({
   selector: 'app-new-comp',
@@ -17,6 +18,9 @@ export class NewCompComponent implements OnInit {
     "Master's Degree",
     "Doctoral degree"
   ];
+
+  studentModel = new Student('', '', 18, "", "", 123456789);
+
 
   public color = [];
 

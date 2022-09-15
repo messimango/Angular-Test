@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +11,7 @@ import { RedColorDirective } from './Directives/fontcolor.directive';
 import { BlueColorDirective } from './Directives/bluecolor.directive';
 import { GreenColorDirective } from './Directives/greencolor.directive';
 import { FavoriteColorService } from './favorite-color.service';
+import { StudentComponent } from './student/student.component';
 
 
 @NgModule({
@@ -18,12 +21,14 @@ import { FavoriteColorService } from './favorite-color.service';
     Component1Component,
     RedColorDirective,
     BlueColorDirective,
-    GreenColorDirective
+    GreenColorDirective,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [FavoriteColorService],
   bootstrap: [AppComponent]
