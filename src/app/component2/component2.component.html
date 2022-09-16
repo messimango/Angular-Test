@@ -3,7 +3,7 @@
 <form [formGroup]="favoriteBook">
     <div class="form-group">
         <label>Book Name</label>
-        <input formControlName="bookName" type="text" class="form-control w-25" required>
+        <input formControlName="bookName" type="text" class="form-control w-25">
     </div>
 
     <div formGroupName="authorName">
@@ -23,7 +23,27 @@
         <input formControlName="timesRead" type="number" class="form-control w-25" >
     </div>
 
+    <br><br>
     <button class="btn btn-primary">Submit</button>
     
 </form>
+
+
+<table>
+    <tr>
+        <th>Color</th>
+        <th>Likes</th>
+        <th>Dislikes</th>
+    </tr>
+
+    <tr *ngFor="let color of favoriteColors">
+        <td>{{color.Color}}</td>    
+        <td>{{color.NumberofLikes}}</td>
+        <td>{{color.NumberofDislikes}}</td>    
+        <td>Hello</td>
+    </tr>
+</table>
+
+
+
 

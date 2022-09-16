@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule } from '@angular/forms';
-import { NgModel } from '@angular/forms';
+import { FavoriteColorService } from '../favorite-color.service';
 
 @Component({
   selector: 'app-component2',
@@ -17,7 +17,11 @@ export class Component2Component implements OnInit {
     timesRead: new FormControl('')
   });
 
-  constructor() { }
+  favoriteColors: any[];
+
+  constructor(private color:FavoriteColorService) {
+    this.favoriteColors = this.color.getFavoriteColor();
+   }
 
   ngOnInit(): void {
   }

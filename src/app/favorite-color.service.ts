@@ -11,32 +11,32 @@ export class FavoriteColorService {
     return [
       {
         "Color": "Pink",
-        "Number of Likes": 6,
-        "Number of Dislikes": 4
+        "NumberofLikes": 6,
+        "NumberofDislikes": 4
       },
       
       {
         "Color": "Blue",
-        "Number of Likes": 8,
-        "Number of Dislikes": 2
+        "NumberofLikes": 8,
+        "NumberofDislikes": 2
       },
       
       {
         "Color": "Purple",
-        "Number of Likes": 4,
-        "Number of Dislikes": 6     
+        "NumberofLikes": 4,
+        "NumberofDislikes": 6     
       },
       
       {
         "Color": "Red",
-        "Number of Likes": 5,
-        "Number of Dislikes": 5
+        "NumberofLikes": 5,
+        "NumberofDislikes": 5
       },
       
       {
         "Color": "Yellow",
-        "Number of Likes": 2,
-        "Number of Dislikes": 8
+        "NumberofLikes": 2,
+        "NumberofDislikes": 8
       },
     ]
   }
